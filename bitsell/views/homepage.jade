@@ -1,0 +1,149 @@
+html(style='height:100%')
+  head
+    link(rel='stylesheet', href='/stylesheets/styletry.css')
+    title Welcome
+  body(style='display:flex;height:100%;flex-direction:column')
+    .fix
+      .god
+        .logo
+          img(src='../images/Logo_header.png')
+        .le
+          a.boy(href="http://localhost:3000/home/homepage") BITSELL
+        .user
+          a.inuser(href='#') #{name}
+        .logout
+          a.inlogout(href='http://localhost:3000/logout') Logout
+      .main(style='flex:1;overflow:auto')
+        ul.categ
+          li
+            a(href='#') Electronics
+            .elec
+              ul
+                li
+                  a(href='http://localhost:3000/home/homepage?category=electronics&subcategory=Laptop%2FMobiles') Lap/Mobile
+                li
+                  a(href='http://localhost:3000/home/homepage?category=electronics&subcategory=Kettle') Elec Kettle
+                li
+                  a(href='http://localhost:3000/home/homepage?category=electronics&subcategory=Heater%2FFan%2FCooler') Heater/Fan/Cooler
+                li
+                  a(href='http://localhost:3000/home/homepage?category=electronics&subcategory=Cables') Cables
+                li
+                  a(href='http://localhost:3000/home/homepage?category=electronics&subcategory=Audio%20Devices') Audio_Devices
+                li
+                  a(href='http://localhost:3000/home/homepage?category=electronics&subcategory=Router') Router
+                li
+                  a(href='http://localhost:3000/home/homepage?category=electronics&subcategory=') Others
+          li
+            a(href='#') Cycle
+            ul
+              li
+                a(href='http://localhost:3000/home/homepage?category=cycle&subcategory=Boys') Boys
+              li
+                a(href='http://localhost:3000/home/homepage?category=cycle&subcategory=Girls') Girls
+              li
+                a(href='http://localhost:3000/home/homepage?category=cycle&subcategory=Gear') Gear
+          li
+            a(href='#') Books
+            ul
+              li
+                a(href='http://localhost:3000/home/homepage?category=books&subcategory=1st%20Year') 1st Year
+              li
+                a(href='http://localhost:3000/home/homepage?category=books&subcategory=2nd%20Year') 2nd Year
+              li
+                a(href='http://localhost:3000/home/homepage?category=books&subcategory=3rd%20Year') 3rd Year
+              li
+                a(href='http://localhost:3000/home/homepage?category=books&subcategory=4th%20Year') 4th Year
+              li
+                a(href='http://localhost:3000/home/homepage?category=books&subcategory=') 5th Year
+              li
+                a(href='http://localhost:3000/home/homepage?category=books&subcategory=M%2ESc%2') M.Sc.
+              li
+                a(href='http://localhost:3000/home/homepage?category=books&subcategory=Others') Others
+          li
+            a(href='#') Chegg Acc.
+            ul
+              li
+                a(href='http://localhost:3000/home/homepage?category=chegg&subcategory=For%20Rent') For Rent
+              li
+                a(href='http://localhost:3000/home/homepage?category=chegg&subcategory=For%20Sale') For Sale
+          li
+            a(href='#') Trunk
+            ul
+              li
+                a(href='http://localhost:3000/home/homepage?category=trunk&subcategory=Big') Big
+              li
+                a(href='http://localhost:3000/home/homepage?category=trunk&subcategory=Small') Small
+          li
+            a(href='#') Mattresses/Pillows
+            ul
+              li
+                a(href='http://localhost:3000/home/homepage?category=bed&subcategory=Matteress') Mattress
+              li
+                a(href='http://localhost:3000/home/homepage?category=bed&subcategory=Pillow') Pillow
+              li
+                a(href='http://localhost:3000/home/homepage?category=bed&subcategory=Set%20of%20both') Set of both
+          li
+            a(href='#') Stationary
+            ul
+              li
+                a(href='http://localhost:3000/home/homepage?category=stationary&subcategory=Whiteboard') Whiteboard
+              li
+                a(href='http://localhost:3000/home/homepage?category=stationary&subcategory=Calculator') Calculator
+              li
+                a(href='http://localhost:3000/home/homepage?category=stationary&subcategory=Others') Others
+          li
+            a(href='#') Stubs
+            ul
+              li
+                a(href='http://localhost:3000/home/homepage?category=stubs&subcategory=Prof%20Shows') Prof Shows
+              li
+                a(href='http://localhost:3000/home/homepage?category=stubs&subcategory=Grub') Grub
+              li
+                a(href='http://localhost:3000/home/homepage?category=stubs&subcategory=Others') Others
+          li
+            a(href='http://localhost:3000/home/homepage?category=others&subcategory=NA') Others
+    for i in data  
+      div
+        .box
+          .img
+          |     
+          .info
+            .title
+              u
+                h1 #{i["titlea"]}
+            | &#x9;
+            .years
+              .text Number of years used:
+              | &nbsp;#{i["years"]}
+            | &#x9;
+            .description
+              .text Description:
+              | &#x9;&nbsp;#{i["desc"]}
+            | &#x9;
+            .price
+              .text Price:&nbsp;
+              | &#x20B9; #{i["price"]}
+            | &#x9;
+            .sellerbutton
+              a.link(href='#') Seller Details
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+    
+    script(src='http://code.jquery.com/jquery-1.9.1.min.js')
+    script(src="/socket.io/socket.io.js")
+    script.
+      var name = $("#p1").text();
+      var socket = io.connect('http://localhost:3000');
+      socket.emit('user',name);
+
+
+
+
+ 

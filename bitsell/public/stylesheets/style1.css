@@ -1,0 +1,77 @@
+.abc {
+
+background-image: url("../images/clockt.jpg");
+background-size:cover;
+display:inline-block;
+
+}
+.xyz {
+background-image: url("../images/wooden.jpg");
+background-color:#000000;
+color:#FFFAF0;
+position:absolute;
+left:60%;
+top:20%;
+margin-bottom:20%;
+display:flex;
+flex-wrap:wrap;
+
+zoom:1.25;
+text-align:center;
+
+}
+.boss {
+display:flex;
+flex-wrap:wrap;
+}
+input[type="text"]:hover, input[type="text"]:focus,input[type="password"]:hover, input[type="password"]:focus{
+background-color:#d0e2f0;
+}
+input[type="submit"]:hover{
+backround-color:#C71585;
+}
+.texter {
+position:relative;
+left:50%;
+margin-top:27.5%;
+}
+.bich{
+margin:0 auto;
+padding:6px;
+}
+.bich1:hover {
+border:1.5px solid #0000FF;
+background-color:#B0C4DE;
+}
+.headmain{
+position:absolute;
+left:58%;
+font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+font-size:75px;
+font-weight:bold;
+color:#FFFFFF;	
+transform:translate(100px,-430px);
+}
+.connect{
+
+}
+.connecttext{
+background-color:#000000;
+opacity:0.6;
+font-size:40px;
+text-decoration: none;
+font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+position:absolute;
+left:58.8%;
+top:40%;
+}
+.connecttext:hover{
+background-color:#000000;
+opacity:0.8;
+font-size:40px;
+text-decoration: none;
+font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+position:absolute;
+left:58.8%;
+top:40%;
+}

@@ -1,0 +1,306 @@
+.god{
+background-color:#000000;
+height:7.5%;
+display:flex;
+flex-direction:row;
+position:fixed;
+width:100%;
+top:0;
+left:0;
+}
+.logo{
+width:1%;
+height:100%;
+margin:auto;
+transform:scale(0.05);
+position:absolute;
+left:20%;
+bottom:40%;
+}
+.le{
+width:35%;
+height:100%
+margin:auto;
+position:absolute;
+left:35%;
+text-align:center;
+font-family: Dosis, sans-serif;
+font-weight: 700;
+font-size:50px;
+color:#FFFFFF;
+}
+.user{
+width:25%;
+height:100%;
+margin:auto;
+text-align:center;
+font-family: Dosis, sans-serif;
+font-weight: 700;
+font-size:20px;
+margin-top:15px;
+color:#FFFFFF;
+position:absolute;
+left:60%;
+}
+.inuser{
+color:#0000FF;
+text-decoration:none;
+}
+.inuser:hover{
+color:#0000FF;
+opacity:0.6;
+text-decoration:underline;
+}
+.user:hover{
+width:25%;
+height:100%;
+margin:auto;
+text-align:center;
+font-family: Dosis, sans-serif;
+font-weight: 700;
+font-size:20px;
+margin-top:15px;
+color:#FFFFFF;
+position:absolute;
+left:60%;
+}
+.logout{
+height:100%;
+margin:auto;
+text-align:center;
+font-family: Dosis, sans-serif;
+font-weight: 700;
+font-size:20px;
+margin-top:15px;
+color:#FFFFFF;
+position:absolute;
+left:90%;
+}
+.inlogout{
+color:#0000FF;
+text-decoration:none;
+}
+.logout:hover{
+height:100%;
+margin:auto;
+text-align:center;
+font-family: Dosis, sans-serif;
+font-weight: 700;
+font-size:20px;
+margin-top:15px;
+color:#FFFFFF;
+position:absolute;
+left:90%;
+}
+.inlogout:hover{
+color:#0000FF;
+text-decoration:underline;
+opacity:0.6;
+}
+
+
+
+
+
+
+
+
+
+
+.god1{
+background-color:#000000;
+opacity:0.85;
+height:107px;
+position:fixed;
+left:0;
+   bottom:0;
+   width:100%;
+display:flex;
+flex-direction:row;
+z-index: 10;
+}
+.logo1{
+height:100%;
+margin:auto;
+position:absolute;
+left:12%;
+zoom:0.9;
+}
+.le1{
+width:35%;
+height:100%
+margin:auto;
+position:absolute;
+left:35%;
+text-align:center;
+font-family: Dosis, sans-serif;
+font-weight: 700;
+font-size:50px;
+color:#FFFFFF;
+margin-top:26px;
+}
+.user1{
+width:25%;
+height:100%;
+margin:auto;
+text-align:center;
+font-family: Dosis, sans-serif;
+font-weight: 700;
+font-size:34px;
+margin-top:34px;
+color:#FFFFFF;
+position:absolute;
+left:60%;
+}
+.inuser1{
+color:#0000FF;
+text-decoration:none;
+}
+.inuser1:hover{
+color:#0000FF;
+opacity:0.6;
+text-decoration:underline;
+}
+.user1:hover{
+width:25%;
+height:100%;
+margin:auto;
+text-align:center;
+font-family: Dosis, sans-serif;
+font-weight: 700;
+font-size:34px;
+margin-top:34px;
+color:#FFFFFF;
+position:absolute;
+left:60%;
+}
+.categ{
+position:absolute;
+top:10%;
+margin:0 auto;
+width: 100%;
+padding:0px;
+list-style-type:none;
+display:flex;
+justify-content:center;
+z-index:1;
+
+}
+ul li a{
+text-decoration:none;
+color:#FFFFFF;
+display:block;
+}
+ul li{
+float:left;
+display:block;
+height:60px;
+width:166px;
+background-color:#000000	;
+font-size:30px;
+line-height:60px;
+text-align:center;
+opacity:0.6;
+border:1px solid #285189;
+}
+ul li a:hover{
+background-color:blue;
+}
+body{
+background-image:url("../images/key6.jpg");
+background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+ul li ul li{
+display:none;
+}
+ul li ul{
+list-style-type:none;
+}
+ul li:hover ul li{
+display:block;
+}
+.fix{
+display:flex;
+flex-direction:column;
+position:fixed;
+width:100%;
+top:0;
+left:0;
+display: block;
+height:100%;
+z-index:2;
+}
+.box{
+width:60%;
+height:auto;
+overflow:hidden;
+top:210px;
+left:20%;
+border:#000000 solid 3px;
+display:flex;
+position:relative;
+opacity:0.7;
+}
+.img{
+width:40%;
+height:230px;
+border:#000000 solid 1px;
+display:block;
+background-color:pink;
+}
+
+.info{
+position:relative;
+width:60%;
+border:#000000 solid 1px;
+display:flex;
+flex-direction:column;
+background-color:white;
+}
+.title{
+position:absolute;
+height:46px;
+text-align: center;
+line-height: 20%;
+display: inline;
+horizontal-align:middle;
+left:50%;
+transform: translateX(-50%);
+}
+.years{
+position:absolute;
+top:46px;
+height:34.5px;
+display:flex;
+font-size:150%;
+}
+.description{
+position:absolute;
+top:80.5px;
+height:69px;
+display:flex;
+font-size:120%;
+}
+.price{
+position:absolute;
+top:149.5px;
+height:34.5px;
+display:flex;
+font-size:150%;
+}
+.sellerbutton{
+position:absolute;
+top:184px;
+height:46px;
+display:flex;
+position:absolute;
+left:30%;
+}
+.text{
+font-weight:bold;
+}
+.link{
+text-decoration:none;
+font-size:200%;
+}

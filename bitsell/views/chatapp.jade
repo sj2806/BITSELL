@@ -1,0 +1,87 @@
+html
+  head
+    link(rel='stylesheet', href='/stylesheets/stylechat.css')
+    title Chat with any online user
+  body
+    .fix
+      .god
+        .logo
+          img(src='../images/Logo_header.png')
+        .le
+          a.boy(href='http://localhost:3000/home/homepage') BITSELL
+        .user
+          a.inuser(href='#') #{name}
+        .logout
+          a.inlogout(href='http://localhost:3000/logout') Logout
+      .chatbw 
+          p#p1 #{name}
+          p#p2 
+      .chatbox
+        p#p3
+      .outputde
+        span Chat with:
+        | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        span Type your message:
+        .inputle
+          input#namerec(placeholder='Name', name='name', size='12', type='text')
+          input#messagename(placeholder='Message', name='msg', size='35', type='text')
+          input#sendmessage(text"hello"='', value='Submit', type='submit')
+      .online
+        h1 Online users
+        br
+        |     
+        p#online
+    script(src='http://code.jquery.com/jquery-1.9.1.min.js')
+    script(src="/socket.io/socket.io.js")
+    script.
+      var name = $("#p1").text();
+      var socket = io.connect('http://localhost:3000');
+      socket.emit('user',name+' ');
+      socket.on('online',function(data){
+        var i;
+        $('#online').text('');
+        for(i=0;i<data.length;i++){
+          $('#online').append(data[i]+'<br>');
+        }
+      });
+       var namee;
+      $("#sendmessage").bind('click',function(){
+          var name1=$("#namerec").val();
+          namee=name1;
+          $("#p2").text('');
+          $("#p2").append(name1);
+           var msg=$("#messagename").val();
+          var name2=$("#p2").text();
+          $("#messagename").val('');
+          socket.emit('msg',msg,name2+' ',name+' ');
+          socket.on('msg1',function(msgs,name1,name2){
+          $("#p3").text('');
+          var j;
+          for(j=0;j<msgs.length;j++)
+          {
+            if((msgs[j]!='0')&&(msgs[j]!=1))
+            {
+            if(msgs[j].charAt(0)=='1')
+            {
+               var a=msgs[j].split('');
+               a.splice(0,1);
+               var b=a.join('');
+               $("#p3").append(name1+' : '+b+'<br><br>');
+            }
+           else
+           {
+               var a=msgs[j].split('');
+               a.splice(0,1);
+               var b=a.join('');
+               $("#p3").append(name2+' : '+b+'<br><br>');
+           }
+           }
+          }   
+      });
+     
+      }); 
+
+
+      
+
+      

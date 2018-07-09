@@ -1,0 +1,25 @@
+html
+  head
+    title Log In to your account
+    link(rel='stylesheet', href='/stylesheets/style1.css')
+  body.abc
+    .texter
+      img(src='../images/clocktadjnew.jpg')
+    .headmain
+      p LOG IN
+    .boss
+      form.xyz(action='/login', method='post')
+        fieldset.field
+          legend Log In:
+          label
+            | Email Id:&nbsp;
+            input(size='30', maxlength='100', placeholder='Please enter your BITS mail only', name='email', type='text')
+          br
+          label
+            | Password:
+            input(size='30', maxlength='100', placeholder='Please remember it', name='passwrd', type='password')
+          br
+          .bich
+            input.bich1(text='Submit', size='25', type='submit')
+    .connect
+      a.connecttext(href='http://localhost:3000/users/signup') Create a new account

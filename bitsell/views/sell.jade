@@ -1,0 +1,142 @@
+html
+  head
+    link(rel='stylesheet', href='stylesheets/style4.css')
+    title Upload your item
+  body.abc
+    .texter
+      img(src='../images/clocktadjnew.jpg')
+    br
+    .headmain
+      p BECH DE
+    .chota
+      fieldset.xyz
+        form.boss(action='/sell', method='post')
+          label Title:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          input(placeholder='Give an attractive title', size='30', maxlength='100', name='myname', type='text')
+          br
+          label Price:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          input(placeholder='Be Reasonable', size='30', maxlength='25', name='idno', type='text')
+          br
+          label Number of years used:&nbsp;&nbsp;
+          select(name='hostel')
+            option(value='none') Choose
+            |   
+            option(value='lessthanone') &lt;1
+            |   
+            option(value='one') 1
+            |   
+            option(value='two') 2
+            |   
+            option(value='three') 3
+            |   
+            option(value='four') 4
+            |   
+            option(value='morethanfour') &gt;4
+          br
+          label#giri Category:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          select#ddl1(name='catag', onchange="configureDropDownLists(this,document.getElementById('ddl2'))")
+            option(value='none') Choose
+            |   
+            option(value='electronics') Electronics
+            |   
+            option(value='cycle') Cycle
+            |   
+            option(value='books') Books
+            |   
+            option(value='chegg') Chegg Account
+            |   
+            option(value='trunk') Trunk
+            |   
+            option(value='bed') Mattress/Pillow
+            |   
+            option(value='stationary') Stationary
+            |   
+            option(value='stubs') Stubs
+            |   
+            option(value='others') Others
+          br
+          label Sub-Category:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          select#ddl2(name='subcatag')
+          script(type='text/javascript').
+            function configureDropDownLists(ddl1,ddl2) {
+            var electronics = ["Laptop/Mobiles","Kettle","Heater/Fan/Cooler","Cables","Audio Devices","Router"];
+            var cycle = ["Boys","Girls","Gear"];
+            var books =["1st Year","2nd Year","3rd Year","4th Year","M.Sc.","Others"] ;
+            var chegg = ["For Rent","For Sale"];
+            var trunk = ["Small","Big"];
+            var bed = ["Matteress","Pillow","Set of both"];
+            var stationary = ["Whiteboard","Calculator","Others"];
+            var stubs = ["Prof Shows","Grub","Others"];
+            var others = ["NA"];
+            switch (ddl1.value) {
+            case 'electronics':
+            ddl2.options.length = 0;
+            for (i = 0; i < electronics.length; i++) {
+            createOption(ddl2, electronics[i], electronics[i]);
+            }
+            break;
+            case 'cycle':
+            ddl2.options.length = 0;
+            for (i = 0; i < cycle.length; i++) {
+            createOption(ddl2, cycle[i], cycle[i]);
+            }
+            break;
+            case 'books':
+            ddl2.options.length = 0;
+            for (i = 0; i < books.length; i++) {
+            createOption(ddl2, books[i], books[i]);
+            }
+            break;
+            case 'chegg':
+            ddl2.options.length = 0;
+            for (i = 0; i < chegg.length; i++) {
+            createOption(ddl2, chegg[i], chegg[i]);
+            }
+            break;
+            case 'trunk':
+            ddl2.options.length = 0;
+            for (i = 0; i < trunk.length; i++) {
+            createOption(ddl2, trunk[i], trunk[i]);
+            }
+            break;
+            case 'bed':
+            ddl2.options.length = 0;
+            for (i = 0; i < bed.length; i++) {
+            createOption(ddl2, bed[i], bed[i]);
+            }
+            break;
+            case 'stationary':
+            ddl2.options.length = 0;
+            for (i = 0; i < stationary.length; i++) {
+            createOption(ddl2, stationary[i], stationary[i]);
+            }
+            break;
+            case 'stubs':
+            ddl2.options.length = 0;
+            for (i = 0; i < stubs.length; i++) {
+            createOption(ddl2, stubs[i], stubs[i]);
+            }
+            break;
+            case 'others':
+            ddl2.options.length = 0;
+            for (i = 0; i < others.length; i++) {
+            createOption(ddl2, others[i], others[i]);
+            }
+            break;
+            default:
+            ddl2.options.length = 0;
+            break;
+            }
+            }
+            function createOption(ddl, text, value) {
+            var opt = document.createElement('option');
+            opt.value = value;
+            opt.text = text;
+            ddl.options.add(opt);
+            }
+          br
+          label Description:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          input(placeholder='Be short and precise.', size='50', name='description', type='text')
+          br
+          div
+            input.bich1(text='Submit', size='25', type='submit')

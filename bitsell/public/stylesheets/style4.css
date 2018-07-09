@@ -1,0 +1,37 @@
+.abc {
+background-image: url("../images/clockt.jpg");
+background-size:cover;
+display:inline-block;
+}
+.xyz {
+background-image:url("../images/wooden.jpg");
+color:#FFFAF0;
+}
+.chota{
+display:inline-block;
+position:absolute;
+left:60%;
+top:21%;
+}
+.texter {
+position:relative;
+left:40%;
+margin-top:25%;
+}
+input[type="text"]:hover, input[type="password"]:hover, input[type="password"]:focus, input[type="text"]:focus{
+background-color:#d0e2f0;
+}
+.bich1:hover {
+border:1.5px solid #0000FF;
+background-color:#B0C4DE;
+}
+.headmain{
+position:absolute;
+left:66.5%;
+font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+font-size:75px;
+font-weight:bold;
+color:#FFFFFF;	
+transform:translate(0,-430px);
+}
+background-color:#966F33;

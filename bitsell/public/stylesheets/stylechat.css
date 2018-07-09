@@ -1,0 +1,149 @@
+body{
+	background-image:url("../images/key5.jpg");
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+	}
+.god{
+background-color:#000000;
+height:7.5%;
+display:flex;
+flex-direction:row;
+position:fixed;
+width:100%;
+top:0;
+left:0;
+}
+.logo{
+width:1%;
+height:100%;
+margin:auto;
+transform:scale(0.05);
+position:absolute;
+left:20%;
+bottom:40%;
+}
+.le{
+width:35%;
+height:100%
+margin:auto;
+position:absolute;
+left:35%;
+text-align:center;
+font-family: Dosis, sans-serif;
+font-weight: 700;
+font-size:50px;
+color:#FFFFFF;
+}
+.user{
+width:25%;
+height:100%;
+margin:auto;
+text-align:center;
+font-family: Dosis, sans-serif;
+font-weight: 700;
+font-size:20px;
+margin-top:15px;
+color:#FFFFFF;
+position:absolute;
+left:60%;
+}
+.inuser{
+color:#0000FF;
+text-decoration:none;
+}
+.inuser:hover{
+color:#0000FF;
+opacity:0.6;
+text-decoration:underline;
+}
+.user:hover{
+width:25%;
+height:100%;
+margin:auto;
+text-align:center;
+font-family: Dosis, sans-serif;
+font-weight: 700;
+font-size:20px;
+margin-top:15px;
+color:#FFFFFF;
+position:absolute;
+left:60%;
+}
+.logout{
+height:100%;
+margin:auto;
+text-align:center;
+font-family: Dosis, sans-serif;
+font-weight: 700;
+font-size:20px;
+margin-top:15px;
+color:#FFFFFF;
+position:absolute;
+left:90%;
+}
+.inlogout{
+color:#0000FF;
+text-decoration:none;
+}
+.logout:hover{
+height:100%;
+margin:auto;
+text-align:center;
+font-family: Dosis, sans-serif;
+font-weight: 700;
+font-size:20px;
+margin-top:15px;
+color:#FFFFFF;
+position:absolute;
+left:90%;
+}
+.inlogout:hover{
+color:#0000FF;
+text-decoration:underline;
+opacity:0.6;
+}
+.chatbw{
+	font-size:24px;
+	background-color:#7FFF00;
+	border-radius:25px;
+	font-weight:bolder;
+	position:absolute;
+	top:15%;
+	left:6%;
+}
+.chatbox{
+	background-color:#FF1493;
+	width:30%;
+	height:45%;
+	top:30%;
+	left:6%;
+	position:absolute;
+	font-size:19px;
+	border-radius:10px;
+	overflow-y:auto; 
+}
+.outputde{
+	position:absolute;
+	top:77%;
+	left:6%;
+	font-size:20px;
+}
+.inputle{
+	position:absolute;
+	top:82%;
+	left:6%;
+}
+.was{
+	background-color:#39CCCC;
+}
+.online{
+	position:absolute;
+	border-radius:10px;
+	left:43%;
+	top:30%;
+	height:45%;
+	width:15%;
+	background-color:#7FDBFF;
+	overflow-y:auto; 
+	font-size:21px;
+}

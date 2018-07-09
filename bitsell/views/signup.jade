@@ -1,0 +1,63 @@
+html
+  head
+    link(rel='stylesheet', href='/stylesheets/style2.css')
+    title Create a new account
+  body.abc
+    .texter
+      img(src='../images/clocktadjnew.jpg')
+    .headmain
+      p SIGN UP
+    .chota
+      fieldset.xyz
+        form.boss(action='/users/signup', method='post')
+          label Full name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          input(placeholder='Your name here', size='30', maxlength='100', name='myname', type='text')
+          br
+          label Id Number:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          input(placeholder='Ex. 2016A7PS043P', size='30', maxlength='25', name='idno', type='text')
+          br
+          label Email Address:&nbsp;&nbsp;
+          input(placeholder='Enter BITS mail only', size='30', maxlength='100', name='email', type='text')
+          br
+          label Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          input(placeholder="Don't forget this password", size='30', maxlength='100', name='securepass', type='password')
+          br
+          label Hostel:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          select(name='hostel')
+            option(value='none') Select your hostel
+            |   
+            option(value='cvr') CVR
+            |   
+            option(value='ranapratap') Rana Pratap
+            |   
+            option(value='ashok') Ashok
+            |   
+            option(value='vishwakarma') Vishwakarma
+            |   
+            option(value='bhagirath') Bhagirath
+            |   
+            option(value='krishna') Krishna
+            |   
+            option(value='gandhi') Gandhi
+            |   
+            option(value='shankar') Shankar
+            |   
+            option(value='vyas') Vyas
+            |   
+            option(value='ram') Ram
+            |   
+            option(value='budh') Budh
+            |   
+            option(value='malviya') Malviya
+            |   
+            option(value='meera') Meera
+          | &nbsp;&nbsp;&nbsp;&nbsp;
+          label Room number:
+          | &nbsp;
+          input(size='6', name='roomno', type='text')
+          br
+          label Contact number:
+          input(size='15', name='contact', type='text')
+          br
+          div
+            input.bich1(text='Submit', size='25', type='submit')

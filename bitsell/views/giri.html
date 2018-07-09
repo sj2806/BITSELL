@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>Chutiya</title>
+</head>
+<body>
+<p id="p1">#{name}</p>
+<br>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script>
+	alert($('#p1').val());
+	for(j=0;j<socks[$("#p2").text()+' '][$("#p1").text()+' '].length;j++)
+          {
+            $("#p3").append(socks[$("#p2").text()+' '][$("#p1").text()+' '][j]+'<br>');
+          }
+          socket.emit('msg1',socks);
+          socket.on('msg1',function(socks){
+          $("#p3").text('hii');
+          var j;
+      });
+</script>
+</body>
+</html>
