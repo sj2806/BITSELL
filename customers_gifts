@@ -1,0 +1,63 @@
+#include <iostream>
+#include<cstring>
+#include<algorithm>
+using namespace std;
+
+int main()
+{
+    struct customerInfo{
+		string firstName;
+		string lastName;
+		string dob;
+	};
+	customerInfo records[7];
+	int recLength = 0;
+	int breakloop = 0;
+	string managerId = "ABC 132";
+	char c;
+	while(breakloop == 0) {
+		string custOrMang;
+		cout<<"Enter the word \"customer\" if you are a customer or your ID if you are the manager.\n";
+		getline(cin,custOrMang);
+		if(custOrMang=="customer"){
+			if(recLength==7)
+				cout<<"Sorry, no more customers.\n";
+			else {
+				cout<<"Hello customer. Please enter your name(first and last) followed by your birthday(MM/DD/YYYY)\n";
+				cin>>records[recLength].firstName>>records[recLength].lastName>>records[recLength].dob;
+				cin.ignore();
+				cout<<"Thank you "<<records[recLength].firstName<<"!\n";
+				recLength++;
+			}
+		}
+		else if(custOrMang=="exit"){
+			cout<<"Bye!\n";
+			break;
+		}
+		else {
+			while(custOrMang!=managerId) {
+				cout<<"Wrong ID entered. Please enter again!\n";
+				getline(cin,custOrMang);
+			}
+			string managerChoice;
+			int managerExit = 0;
+			while(managerExit==0) {
+				cout<<"Hello manager. What would you like to do? Print to screen or exit?\n";
+				getline(cin,managerChoice);
+				transform(managerChoice.begin(), managerChoice.end(), managerChoice.begin(), ::tolower);
+				if(managerChoice=="print to screen") {
+				    if(recLength==0)
+				        cout<<"Sorry, no customers have entered any information yet\n";
+				    else {
+    					cout<<"CUSTOMERS\n\n";
+    					for(int i=0;i<recLength;i++)
+    						cout<<"BIRTHDAY: "<<records[i].dob<<"\tNAME:"<<records[i].lastName<<", "<<records[i].firstName<<endl;
+				    }
+				}
+				else if(managerChoice=="exit")
+					managerExit = 1;
+			}
+		}
+	}
+    return 0;
+}
